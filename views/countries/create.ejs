@@ -1,0 +1,87 @@
+<h1 class="mb-4">Agregar País</h1>
+
+<%- include('../partials/alerts') %>
+
+<form action="/countries/create" method="POST" class="card p-4 shadow-sm">
+
+  <div class="mb-3">
+    <label class="form-label">Nombre Oficial</label>
+
+    <input
+      type="text"
+      name="officialName"
+      class="form-control"
+      value="<%= country.officialName || '' %>"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Capital</label>
+
+    <input
+      type="text"
+      name="capital"
+      class="form-control"
+      placeholder="Separar con comas"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Borders</label>
+
+    <input
+      type="text"
+      name="borders"
+      class="form-control"
+      placeholder="ARG,BRA,CHL"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Área</label>
+
+    <input
+      type="number"
+      step="any"
+      name="area"
+      class="form-control"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Población</label>
+
+    <input
+      type="number"
+      name="population"
+      class="form-control"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Timezones</label>
+
+    <input
+      type="text"
+      name="timezones"
+      class="form-control"
+      placeholder="UTC-3,UTC-4"
+    >
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Gini</label>
+
+    <input
+      type="number"
+      step="any"
+      name="gini"
+      class="form-control"
+    >
+  </div>
+
+  <button class="btn btn-dark">
+    Guardar país
+  </button>
+
+</form>
